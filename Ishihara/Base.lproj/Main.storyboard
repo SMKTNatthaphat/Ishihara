@@ -42,14 +42,6 @@
                                     <rect key="frame" x="6" y="517" width="374" height="70"/>
                                 </variation>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number oniy" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="axG-y5-qLf">
-                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="87" y="606" width="240" height="30"/>
-                                </variation>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AHg-go-cmP">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
@@ -57,16 +49,27 @@
                                     <color key="titleColor" red="0.27745390399999997" green="0.99578291799999996" blue="0.99814499999999995" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="644" width="360" height="92"/>
+                                    <rect key="frame" x="32" y="690" width="360" height="51"/>
                                 </variation>
+                                <connections>
+                                    <action selector="answerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kU2-WF-NSr"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ishihara_01.png" translatesAutoresizingMaskIntoConstraints="NO" id="SbB-7v-cgb">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="tintColor" red="0.7314176299828048" green="0.89291557591623039" blue="0.74514478338429102" alpha="1" colorSpace="calibratedRGB"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="130" y="74" width="270" height="270"/>
+                                    <rect key="frame" x="130" y="69" width="270" height="270"/>
                                 </variation>
                             </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number oniy" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="axG-y5-qLf">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="97" y="611" width="240" height="30"/>
+                                </variation>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -74,9 +77,9 @@
                                 <exclude reference="M8R-Vo-edS"/>
                                 <exclude reference="RTa-PX-fGE"/>
                                 <exclude reference="LBI-Xi-iHj"/>
-                                <exclude reference="axG-y5-qLf"/>
                                 <exclude reference="AHg-go-cmP"/>
                                 <exclude reference="SbB-7v-cgb"/>
+                                <exclude reference="axG-y5-qLf"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -84,12 +87,16 @@
                                 <include reference="M8R-Vo-edS"/>
                                 <include reference="RTa-PX-fGE"/>
                                 <include reference="LBI-Xi-iHj"/>
-                                <include reference="axG-y5-qLf"/>
                                 <include reference="AHg-go-cmP"/>
                                 <include reference="SbB-7v-cgb"/>
+                                <include reference="axG-y5-qLf"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="answerTextFied" destination="axG-y5-qLf" id="lLT-X3-0ep"/>
+                        <outlet property="ishiharaImageView" destination="SbB-7v-cgb" id="zys-gV-fBf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

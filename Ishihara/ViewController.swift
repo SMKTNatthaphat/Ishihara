@@ -9,6 +9,17 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    
+    @IBOutlet weak var ishiharaImageView: UIImageView!
+    
+    
+    @IBOutlet weak var answerTextFied: UITextField!
+    
+    var strAnswer:String = ""
+    var intIndex:Int = 0
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,5 +32,18 @@ class ViewController: UIViewController {
     }
 
 
+    
+    @IBAction func answerButton(sender: AnyObject) {
+        
+       strAnswer = String(answerTextFied.text)
+        print("strAnswer ==> \(strAnswer)")
+        
+        intIndex += 1
+        print("intIndex ==> \(intIndex)")
+        
+        
+    }
+    
+    
 }
 
